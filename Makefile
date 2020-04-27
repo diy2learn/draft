@@ -27,7 +27,7 @@ init_git: check-GITHUBPAT check_url-REPO_URL
 	git init && \
 	git add . && \
 	git commit -m "init repo from template" && \
-	git remote add origin $(PAT_URL) && \
+	git remote add origin $$PAT_URL && \
 	git push -f origin master
 
 refs:
