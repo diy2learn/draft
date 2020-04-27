@@ -23,7 +23,7 @@ auth_url:| check-GITHUBPAT check_url-REPO_URL
 init_git: check-GITHUBPAT check_url-REPO_URL
 	@export REPO_URL=$(REPO_URL); \
         export PAT_URL="$${REPO_URL:0:8}$(GITHUBPAT)@$${REPO_URL:8}"; \
-	echo PAT_URL is $$PAT_URL;  
+	echo PAT_URL is $$PAT_URL; \
 	git init && \
 	git add . && \
 	git commit -m "init repo from template" && \
